@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Helado_bote.h"
+#include "Helado.h"
 #include "Paleta.h"
 #include "Malteada.h"
 
