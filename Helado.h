@@ -5,18 +5,18 @@ using namespace std;
 class Helado_bote{
     private:
         int num_helados;
-        //int precio;
+        float precio;
         string sabor;
-        int tam; //tamanio en mililitros
-        string caducidad; //dia/mes/anio
+        string tam; //tamanio chico/grande
+        int caducidad; //dia/mes/anio
     public:
         //constructor default
         Helado_bote(){
             num_helados = 0;
             //precio = 63;
             sabor = "";
-            tam = 500;
-            int meses = rand()%8+1;
+            tam = "";
+            int meses = rand()%8 + 1;
             caducidad = meses;
         }
         //Getters
@@ -24,11 +24,11 @@ class Helado_bote{
             return sabor;
         }
 
-        int getTam(){
+        string getTam(){
             return tam;
         }
 
-        string getCaducidad() {
+        int getCaducidad() {
             return caducidad;
         }
 
@@ -38,13 +38,11 @@ class Helado_bote{
             sabor = sab;
         }
 
-        void setTam(int tama){
+        void setTam(string tama){
             tam = tama;
         }
 
-        void setCaducidad(string cad){
-            caducidad = cad;
-        }
+
         void setNum_helado(int numh){
             num_helados = numh;
         }
@@ -53,7 +51,7 @@ class Helado_bote{
             cout << "Número de helados " << num_helados << endl
                  << "Sabor: " << sabor << endl
                  << "Tamaño(ml): " << tam << endl
-                 << "Caduca en: " << caducidad << " meses" << endl;
+                 << "Tu helado Caduca en: " << caducidad << " meses" << endl;
                  //<< "Precio " << precio * num_helados << endl;
         }
         

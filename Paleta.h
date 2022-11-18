@@ -5,7 +5,7 @@ using namespace std;
 class Paleta{
     private:
         int num_paletas;
-        //int precio;
+        int precio;
         string sabor;
         string tipo; // si es paleta de leche o de agua
     public:

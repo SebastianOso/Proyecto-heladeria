@@ -3,21 +3,20 @@
 using namespace std;
 
 
-
 class Malteada{
     private:
         string sabor;
-        int tam; //tamanio en litros
+        string tam; //tamanio en litros
         string crema_batida; // pregunta de s/n
         int num_malteadas;  
-        //int precio;
+        float precio; //poner precio de malteada y que no se pueda cambiar
         
     public:
         //constructor default
         Malteada(){
             num_malteadas = 0;
             //precio = 20;
-            tam = 500;
+            tam = "";
             sabor = "";
             crema_batida = "n";
         }
@@ -26,7 +25,7 @@ class Malteada{
             return sabor;
         }
 
-        int getTam(){
+        string getTam(){
             return tam;
         }
 
@@ -44,7 +43,7 @@ class Malteada{
             sabor = sab;
         }
 
-        void setTam(int tama){
+        void setTam(string tama){
             tam = tama;
         }
 
