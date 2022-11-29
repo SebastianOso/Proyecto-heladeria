@@ -1,69 +1,46 @@
+#ifndef MALTEADA_H
+#define MALTEADA_H
 #include <iostream>
+#include "itemcompra.h"
 
 using namespace std;
 
 
-class Malteada{
+class Malteada: public Item{
     private:
-        string sabor;
-        string tam; //tamanio en litros
         string crema_batida; // pregunta de s/n
-        int num_malteadas;  
-        float precio; //poner precio de malteada y que no se pueda cambiar
         
     public:
         //constructor default
-        Malteada(){
-            num_malteadas = 0;
-            //precio = 20;
-            tam = "";
-            sabor = "";
-            crema_batida = "n";
+        Malteada(string crema,string sab,string tam):Item (sab, tam, 40){
+            crema_batida = crema;
         }
+        
         //Getters
-        string getSabor() {
-            return sabor;
-        }
 
-        string getTam(){
-            return tam;
-        }
-
-        string getCremaBatida() {
+        string getCremaBatida(){
             return crema_batida;
         }
 
-        int getNum_malteadas(){
-            return num_malteadas;
-        }
 
         //Setters
 
-        void setSabor(string sab){
-            sabor = sab;
-        }
-
-        void setTam(string tama){
-            tam = tama;
-        }
 
         void setCremaBatida(string crema){
             crema_batida = crema;
         }
 
-        void setNumero_malteadas(int numm){
-            num_malteadas = numm;
+        //metodos
+
+        void imprimirInfo(){
+            cout << "Malteada:" << endl
+                 << "Sabor " << sabor << endl
+                 << "Tamaño " << tam << endl
+                 << "Crema batida " << crema_batida << endl
+                 << "-----------------" << endl;
         }
-
-        void imprimirDatos(){
-            cout << "Número de malteadas " << num_malteadas << endl
-                 << "Sabor: " << sabor << endl
-                 << "Crema Batida: " << crema_batida << endl
-                 << "Tamaño(ml): " << tam << endl;
-                 //<< "Precio " << precio * num_malteadas << endl;
-
-
-        }
-
+      
 
 };
+
+#endif
